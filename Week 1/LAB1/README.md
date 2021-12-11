@@ -48,7 +48,7 @@ Creating a resource Group....in a cloud shell in Azure i used the Az at the begi
  sudo apt-get -y install nginx
 
 7
-then after the installation  of your webserver you can put your public IP addresss in your brower and your
+then after the installation  of your webserver you can put your public IP addresss in your browser
 
 
 
