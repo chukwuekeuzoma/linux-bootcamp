@@ -7,6 +7,7 @@
 
 ### Notes:
 
+## done the tasks without Errors
 Quickstart: SSH for Linux VMs
 * https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys
 
