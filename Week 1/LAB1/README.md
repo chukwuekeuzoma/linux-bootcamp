@@ -1,5 +1,5 @@
 # Lab 1: Create a Linux virtual machine with the Azure CLI
-
+ Done all task
 1. Launch Azure Cloud Shell
 2. Create a resource group
 3. Create virtual machine
