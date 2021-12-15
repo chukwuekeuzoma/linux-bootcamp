@@ -30,6 +30,36 @@ Default Azure Disks
 
  while the Standard Disks this delivers high cost when been in performance.
 
+ 4
+  This has already been done in the recent Labs 
+
+ 5
+  Create and attach disks
+   
+   When A virtual Machine is created or you already have an existing virtual machine Data disk can be created and attached.
+
+   This is the command i used when creating a VM so i added a command line where the data disk is also created.
+
+   "az vm create --resource-group myResourceGroupDisk --name myVM --image UbuntuLTS --size Standard_DS2_v2          --admin-username azureuser   --generate-ssh-keys  --data-disk-sizes-gb 128 128"
+
+  while this command below is used to attach the Data disk into a VM 
+
+    az vm disk attach  --resource-group myResourceGroupDisk --vm-name myVM --name myDataDisk --size-gb 128 --sku Premium_LRS --new
+
+ 6 Prepare data disks
+    Still Working on it.
+
+ 7 Take a disk snapshot
+   Snapshots in VM  are useful to quickly save the state of your VM before you make configuration changes.In the event of an issue or error, VM can be restored using a snapshot. When a VM has more than one disk, a snapshot is taken of each disk independently of the others. To take application consistent backups, consider stopping the VM before you take disk snapshots
+
+   Before you create A Snap Shot  You need the ID or the name of the Disk
+   by using this command.
+
+   osdiskid=$(az vm show  -g myResourceGroupDisk -n myVM --query "storageProfile.osDisk.managedDisk.id" -o tsv)
+
+   now that you have the ID you can create a snapshot
+
+   az snapshot create --resource-group myResourceGroupDisk --source "$osdiskid" --name osDisk-backup 
 
 
 Quickstart: Manage Azure disks
