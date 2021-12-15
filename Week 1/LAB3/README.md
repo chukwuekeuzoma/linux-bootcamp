@@ -44,7 +44,7 @@ Default Azure Disks
 
   while this command below is used to attach the Data disk into a VM 
 
-    az vm disk attach  --resource-group myResourceGroupDisk --vm-name myVM --name myDataDisk --size-gb 128 --sku Premium_LRS --new
+    "az vm disk attach  --resource-group myResourceGroupDisk --vm-name myVM --name myDataDisk --size-gb 128 --sku Premium_LRS --new"
 
  6 Prepare data disks
     Still Working on it.
@@ -55,11 +55,11 @@ Default Azure Disks
    Before you create A Snap Shot  You need the ID or the name of the Disk
    by using this command.
 
-   osdiskid=$(az vm show  -g myResourceGroupDisk -n myVM --query "storageProfile.osDisk.managedDisk.id" -o tsv)
+   "osdiskid=$(az vm show  -g myResourceGroupDisk -n myVM --query "storageProfile.osDisk.managedDisk.id" -o tsv)"
 
    now that you have the ID you can create a snapshot
 
-   az snapshot create --resource-group myResourceGroupDisk --source "$osdiskid" --name osDisk-backup 
+   "az snapshot create --resource-group myResourceGroupDisk --source "$osdiskid" --name osDisk-backup"
 
 
 Quickstart: Manage Azure disks
