@@ -39,6 +39,19 @@ By using this steps of command Lines
   "ssh -i "Martins-KeyAWS.pem" ec2-user@ec2-3-15-232-87.us-east-2.compute.amazonaws.com"
 
 6 Install a webserver
+
+ Installing a web server. Apache an open-source Web server by using the following Commands
+
+ Right here i will be using the Yum package Manager
+ using Sudo in the following Commands or you can make it more simple by wirting the sudo like this so the commands will be interactive
+
+ sudo su 
+ then the commands
+ yum update -y
+ yum install -y httpd
+
+ 7 View the Webserver in action 
+ 
   
 
 
